@@ -1,8 +1,8 @@
 # daily_reminder.py
 
-task = input("What is your main task for today? ")
-priority = input("What is the priority level? (high, medium, low): ").lower()
-time_bound = input("Is the task time-bound? (yes or no): ").lower()
+task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 match priority:
     case "high":
@@ -12,9 +12,8 @@ match priority:
     case "low":
         message = f"Low-priority task: {task}"
     case _:
-        message = f"Unrecognized priority for: {task}"
+        message = f"Unrecognized priority level for: {task}"
 
-# Add time sensitivity notice
 if time_bound == "yes":
     message += " — that requires immediate attention today!"
 
