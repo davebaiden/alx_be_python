@@ -17,4 +17,4 @@ match priority:
 if time_bound == "yes":
     message += " — that requires immediate attention today!"
 
-print("\n" + message)
+print(f"Reminder: {message}")
