@@ -14,14 +14,14 @@ class Book:
         """
         print(f"Deleting {self.title}")
 
-    def __str__(self) -> str:
+    def __str__(self):
         """Informal string representation for end-users.
 
         Example: "1984 by George Orwell, published in 1949"
         """
         return f"{self.title} by {self.author}, published in {self.year}"
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         """Official representation that can be used to recreate the object.
 
         Example: "Book('1984', 'George Orwell', 1949)"
