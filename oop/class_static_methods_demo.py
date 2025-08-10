@@ -1,29 +1,13 @@
-class Book:
-    """A simple Book class demonstrating Python magic methods."""
+# class_static_methods_demo.py
 
-    def __init__(self, title: str, author: str, year: int):
-        """Initialize a Book instance with title, author, and publication year."""
-        self.title = title
-        self.author = author
-        self.year = year
+class Calculator:
+    calculation_type = "Arithmetic Operations"
 
-    def __del__(self):
-        """Called when the object is about to be destroyed.
+    @staticmethod
+    def add(a, b):
+        return a + b
 
-        Prints a simple deletion message including the book title.
-        """
-        print(f"Deleting {self.title}")
-
-    def __str__(self):
-        """Informal string representation for end-users.
-
-        Example: "1984 by George Orwell, published in 1949"
-        """
-        return f"{self.title} by {self.author}, published in {self.year}"
-
-    def __repr__(self):
-        """Official representation that can be used to recreate the object.
-
-        Example: "Book('1984', 'George Orwell', 1949)"
-        """
-        return f"Book('{self.title}', '{self.author}', {self.year})"
+    @classmethod
+    def multiply(cls, a, b):
+        print(f"Calculation type: {cls.calculation_type}")
+        return a * b
